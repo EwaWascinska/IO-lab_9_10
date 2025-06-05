@@ -18,6 +18,7 @@ public class SimpleTest {
     }
 
 
+
     @Test
     public void test3() {
         Calculator calc = new Calculator();
