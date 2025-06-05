@@ -1,29 +1,25 @@
 package org.example;
+
 import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
-public class SimpleTest{
+public class SimpleTest {
 
     @Test
-    public void test()
-    {
+    public void test() {
         Calculator calc = new Calculator();
-        assert calc.dodaj(1, 2) == 3;
+        assertEquals(3, calc.dodaj(1, 2));
     }
 
     @Test
-    public void test2()
-    {
+    public void test2() {
         Calculator calc = new Calculator();
-        assert calc.dodaj(1, 10) == 11;
+        assertEquals(11, calc.dodaj(1, 10));
     }
 
     @Test
-    public void test3()
-    {
+    public void test3() {
         Calculator calc = new Calculator();
-        assert calc.dodaj(-45, 10) == -35;
+        assertEquals(-35, calc.dodaj(-45, 10));
     }
-
-
-
 }
