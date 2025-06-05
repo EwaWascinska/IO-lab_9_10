@@ -21,6 +21,7 @@ public class SimpleTest {
 
     @Test
     public void test3() {
+
         Calculator calc = new Calculator();
         assertEquals(-35, calc.dodaj(-45, 10));
     }
