@@ -17,6 +17,7 @@ public class SimpleTest {
         assertEquals(11, calc.dodaj(1, 10));
     }
 
+
     @Test
     public void test3() {
 
