@@ -4,8 +4,7 @@ public class Calculator {
 
     private final int baseValue;
 
-    // Konstruktor z parametrem, który nadaje sens konstruktorowi
-    public Calculator(int baseValue) {
+    public Calculator(final int baseValue) {
         this.baseValue = baseValue;
     }
 
