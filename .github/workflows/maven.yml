@@ -1,10 +1,10 @@
-name: Java CI with SpotBugs and Checkstyle
+name: Java CI with Checkstyle
 
 on:
   push:
-    branches: [main]
+    branches: [ "main" ]
   pull_request:
-    branches: [main]
+    branches: [ "main" ]
   workflow_dispatch:
 
 permissions:
@@ -13,7 +13,7 @@ permissions:
   pull-requests: read
 
 jobs:
-  build-and-analyze:
+  build-and-lint:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,5 +26,5 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Build and analyze with Maven (Checkstyle + SpotBugs)
+      - name: Build and run Checkstyle
         run: mvn clean verify
