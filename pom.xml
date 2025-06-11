@@ -47,6 +47,18 @@
                     </rulesets>
                 </configuration>
             </plugin>
+                 <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-pmd-plugin</artifactId>
+    <version>3.21.2</version>
+    <configuration>
+        <rulesets>
+            <ruleset>${project.basedir}/pmd-ruleset.xml</ruleset>
+        </rulesets>
+        <failOnViolation>true</failOnViolation>
+    </configuration>
+</plugin>
+
         </plugins>
     </build>
 </project>
