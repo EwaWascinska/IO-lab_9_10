@@ -31,6 +31,7 @@
 
   <build>
     <plugins>
+      <!-- Kompilator -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -41,10 +42,11 @@
         </configuration>
       </plugin>
 
+      <!-- Checkstyle plugin z nowszą wersją -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>3.2.0</version>
+        <version>3.3.0</version>
         <executions>
           <execution>
             <id>validate</id>
@@ -66,4 +68,5 @@
       </plugin>
     </plugins>
   </build>
+
 </project>
