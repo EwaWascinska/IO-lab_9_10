@@ -5,13 +5,13 @@
          xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 
                              http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
 
-    <!-- Wyłącz konfliktujące reguły -->
+    <!-- Wyłącz reguły konfliktujące ze sobą -->
     <rule ref="category/java/bestpractices.xml">
         <exclude name="AtLeastOneConstructor"/>
         <exclude name="UnnecessaryConstructor"/>
     </rule>
 
-    <!-- Reszta reguł codestyle -->
+    <!-- Włącz inne reguły do kontroli stylu -->
     <rule ref="category/java/codestyle.xml"/>
-
+    
 </ruleset>
