@@ -15,20 +15,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.13.2</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.google.guava</groupId>
-      <artifactId>guava</artifactId>
-      <version>31.1-jre</version>
-    </dependency>
-  </dependencies>
-
   <build>
     <plugins>
       <!-- Kompilator -->
@@ -42,31 +28,26 @@
         </configuration>
       </plugin>
 
-      <!-- Checkstyle plugin z nowszą wersją -->
+      <!-- Spotless plugin do formatowania i sprawdzania stylu -->
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>3.3.0</version>
+        <groupId>com.diffplug.spotless</groupId>
+        <artifactId>spotless-maven-plugin</artifactId>
+        <version>2.29.0</version>
         <executions>
           <execution>
-            <id>validate</id>
-            <phase>validate</phase>
             <goals>
               <goal>check</goal>
             </goals>
-            <configuration>
-              <failsOnError>true</failsOnError>
-            </configuration>
           </execution>
         </executions>
         <configuration>
-          <configLocation>https://raw.githubusercontent.com/checkstyle/checkstyle/master/src/main/resources/google_checks.xml</configLocation>
-          <encoding>UTF-8</encoding>
-          <consoleOutput>true</consoleOutput>
-          <failsOnError>true</failsOnError>
+          <java>
+            <googleJavaFormat>
+              <version>1.15.0</version>
+            </googleJavaFormat>
+          </java>
         </configuration>
       </plugin>
     </plugins>
   </build>
-
 </project>
