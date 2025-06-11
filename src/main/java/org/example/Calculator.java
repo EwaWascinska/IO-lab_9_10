@@ -8,7 +8,7 @@ public class Calculator {
         this.baseValue = baseValue;
     }
 
-    public int dodaj(final int number1, final int number2) {
-        return baseValue + number1 + number2;
+    public int dodaj(final int a, final int b) {
+        return baseValue + a + b;
     }
 }
