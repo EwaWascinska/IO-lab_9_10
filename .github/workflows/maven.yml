@@ -1,4 +1,4 @@
-name: Java CI with SonarQube and SpotBugs
+name: Java CI with SpotBugs
 
 on:
   push:
